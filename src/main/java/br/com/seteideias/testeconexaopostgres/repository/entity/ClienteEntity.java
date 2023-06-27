@@ -1,4 +1,4 @@
-package br.com.seteideias.testeconexaopostgres.model;
+package br.com.seteideias.testeconexaopostgres.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,12 +10,15 @@ import java.io.Serializable;
 @Setter
 @Entity
 @Table(name="cep")
-public class CepEntity implements Serializable {
+public class ClienteEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "id"/*, nullable = false*/)
+    @Column(name = "id")
     private String id;
+
+    @Column(name = "nome_cliente")
+    private String nomeCliente;
     @Column
     private String cep;
     @Column
