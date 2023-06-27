@@ -3,13 +3,12 @@ package br.com.seteideias.testeconexaopostgres.repository.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.io.Serializable;
 
 @Getter
 @Setter
 @Entity
-@Table(name="cep")
+@Table(name="Cliente")
 public class ClienteEntity implements Serializable {
 
     @Id
